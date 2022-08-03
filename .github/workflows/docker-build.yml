@@ -25,10 +25,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: spaceros
-          push: false
-          tags: |
-            spaceros
-            ebenevedes/spaceros:latest
+          push: true
+          tags: ebenevedes/spaceros:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
           no-cache: true
