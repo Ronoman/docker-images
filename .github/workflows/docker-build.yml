@@ -36,7 +36,11 @@ jobs:
   build-and-test-ws:
     needs: build-image
     runs-on: ubuntu-latest
-    container: ebenevedes/spaceros:latest
+    container:
+      image: ebenevedes/spaceros:latest
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     steps:
       - name: Build workspace
         run: colcon build
