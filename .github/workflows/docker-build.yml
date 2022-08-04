@@ -42,8 +42,8 @@ jobs:
     steps:
       - name: Build workspace
         run: colcon build
-        workspace: /root/src/spaceros_ws/
+        working-directory: /root/src/spaceros_ws/
 
       - name: Test workspace
         run: colcon test
-        workspace: /root/src/spaceros_ws/
+        working-directory: /root/src/spaceros_ws/
