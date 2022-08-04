@@ -49,7 +49,7 @@ jobs:
         working-directory: /root/src/spaceros_ws/
 
       - name: Push tested image
-        run: docker/build-push-action@v2
+        uses: docker/build-push-action@v2
         with:
           context: spaceros
           push: true
